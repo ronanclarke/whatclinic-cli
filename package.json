@@ -1,0 +1,18 @@
+{
+  "name": "whatclinic-cli",
+  "version": "0.0.1",
+  "description": "Toolbelt for WhatClinic Engineering",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "whatclinic",
+    "toolbelt"
+  ],
+  "author": "Ronan Clarke <rclarke@whatclinic.com> (http://www.whatclinic.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.3.0"
+  }
+}
