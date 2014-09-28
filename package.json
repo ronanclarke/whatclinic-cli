@@ -1,6 +1,6 @@
 {
   "name": "whatclinic-cli",
-  "version": "0.0.2",
+  "version": "0.0.2-p001",
   "description": "Toolbelt for WhatClinic Engineering",
   "main": "index.js",
   "scripts": {
