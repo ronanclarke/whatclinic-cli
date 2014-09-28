@@ -8,15 +8,15 @@ var program = require('commander');
 
 program
   .usage('[command] <options>')
-  .command('generate [type]')
-  .alias('g')
-  .description('generate files such as SQL migration file')
-  .action(function (type, options) {
-    var mode = options.setup_mode || "normal";
-    type = type || 'migration';
+  .command('generate-sql-script [name-for-script]')
+  .alias('g-sql')
+  .description('generate a SQL migration file in the correct format')
+  .action(function (name) {
+
+    type =  'migration';
 
     generate = require("./src/generate");
-    generate.exec(type);
+    generate.exec(type,name);
 
   });
 

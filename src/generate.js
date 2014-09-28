@@ -6,22 +6,26 @@ fs = require('fs');
 
 module.exports = {
 
-  exec: function (type, options) {
+  exec: function (type, name) {
 
     if (!common.isSaneEnv())
       return;
 
-    this.migration();
+    if(!name || name.length < 5){
+      common.reportError("you must pass a valid label for your script");
+    }
+
+    this.migration(name);
   },
 
   //
   // generate blank migrate file
   //
-  migration: function (options) {
+  migration: function (name) {
 
     // check if we haven't just added a new file
 
-    var fileName = this.buildFileName("test for now");
+    var fileName = this.buildFileName(name);
     var folderPath = this.buildDbFolderPath();
     var outputFilePath = path.join(folderPath, fileName);
 
